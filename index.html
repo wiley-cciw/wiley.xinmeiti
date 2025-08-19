@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEELM - 创新电子烟解决方案</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -18,6 +18,7 @@
             color: #fff;
             line-height: 1.6;
             overflow-x: hidden;
+            min-height: 100vh;
         }
         
         .container {
@@ -27,148 +28,90 @@
         }
         
         header {
-            padding: 30px 0;
+            padding: 20px 0;
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
+            margin-bottom: 30px;
         }
         
         .logo {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: 5px;
-            color: transparent;
-            background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-size: 200% auto;
-            animation: shine 3s linear infinite;
+            letter-spacing: 3px;
+            color: #7b68ee;
             margin-bottom: 10px;
         }
         
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
-        
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #a0a0d0;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            max-width: 600px;
+            margin: 0 auto 20px;
         }
         
         .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: rgba(0, 0, 0, 0.4);
-            margin: 30px 0;
-            border-radius: 20px;
+            padding: 30px;
+            background: rgba(30, 30, 50, 0.5);
+            border-radius: 15px;
+            margin: 20px 0;
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            z-index: -1;
+            border: 1px solid rgba(100, 100, 255, 0.2);
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px rgba(128, 0, 255, 0.7);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #a78bfa;
         }
         
         .hero p {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
             color: #d0d0ff;
         }
         
-        .features {
+        .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-        }
-        
-        .feature-card {
-            background: rgba(30, 30, 50, 0.7);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(100, 100, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-            border-color: rgba(100, 100, 255, 0.5);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.8rem;
-            margin: 20px 0;
-            color: #7b68ee;
-        }
-        
-        .feature-card p {
-            color: #b0b0d0;
-            font-size: 1.1rem;
-        }
-        
-        .product-showcase {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 60px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
         
         .product {
-            width: 280px;
-            text-align: center;
-            padding: 25px;
             background: rgba(25, 25, 45, 0.7);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
             transition: transform 0.3s;
             border: 1px solid rgba(100, 100, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .product:hover {
-            transform: scale(1.05);
+            transform: translateY(-8px);
             border-color: rgba(100, 100, 255, 0.5);
         }
         
         .product-img {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 20px;
+            width: 100%;
+            height: 220px;
+            margin: 0 auto 15px;
             background: linear-gradient(45deg, #2c3e50, #4a235a);
-            border-radius: 15px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.2);
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
         
         .product-img::after {
-            content: "鑫火智汇";
+            content: "FEELM";
             position: absolute;
             font-size: 1.5rem;
             color: rgba(255, 255, 255, 0.1);
@@ -176,120 +119,135 @@
         }
         
         .product h3 {
-            font-size: 1.5rem;
-            margin: 15px 0;
+            font-size: 1.4rem;
+            margin: 15px 0 10px;
             color: #7b68ee;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .product p {
             color: #b0b0d0;
             font-size: 0.95rem;
-            min-height: 80px;
+            min-height: 70px;
         }
         
-        .tech-specs {
+        .product-feature {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(40, 40, 60, 0.5);
+            border-radius: 10px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+        
+        .tech {
             background: rgba(20, 20, 40, 0.7);
-            padding: 50px 30px;
-            border-radius: 20px;
-            margin: 60px 0;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
             text-align: center;
             border: 1px solid rgba(100, 100, 255, 0.2);
         }
         
-        .tech-specs h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+        .tech h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
             color: #7b68ee;
         }
         
-        .spec-grid {
+        .tech-items {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
         
-        .spec-item {
-            padding: 20px;
+        .tech-item {
+            padding: 15px;
             background: rgba(40, 40, 60, 0.5);
-            border-radius: 15px;
+            border-radius: 10px;
         }
         
-        .spec-item i {
-            font-size: 2.5rem;
+        .tech-item i {
+            font-size: 2rem;
             color: #9370db;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
-        .spec-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+        .tech-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
             color: #a78bfa;
         }
         
         .cta {
             text-align: center;
-            padding: 70px 20px;
+            padding: 40px 20px;
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            border-radius: 20px;
-            margin: 60px 0;
+            border-radius: 15px;
+            margin: 40px 0;
         }
         
         .cta h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
         
         .cta p {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
         }
         
         .btn {
             display: inline-block;
             background: #ff2d75;
             color: white;
-            padding: 15px 40px;
+            padding: 12px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 1.1rem;
             transition: all 0.3s;
             box-shadow: 0 5px 15px rgba(255, 45, 117, 0.4);
         }
         
         .btn:hover {
             background: #ff4d8d;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 45, 117, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 45, 117, 0.6);
         }
         
         footer {
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 30px 20px;
+            margin-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #a0a0d0;
             font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
+            .logo {
+                font-size: 2.3rem;
+            }
+            
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .cta h2 {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             
-            .cta p {
-                font-size: 1.1rem;
+            .products {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -298,119 +256,94 @@
     <div class="container">
         <header>
             <div class="logo">FEELM</div>
-            <div class="tagline">创新科技 · 非凡体验</div>
+            <div class="tagline">创新科技 · 非凡体验 · 重新定义电子烟</div>
         </header>
         
         <section class="hero">
-            <h1>重新定义电子烟体验</h1>
-            <p>FEELM全球领先的陶瓷芯技术和创新解决方案，为您带来前所未有的口感与满足感</p>
+            <h1>创新电子烟解决方案</h1>
+            <p>FEELM全球领先的陶瓷芯技术和创新设计，为您带来前所未有的口感与满足感</p>
         </section>
         
-        <section class="features">
-            <div class="feature-card">
-                <i class="fas fa-battery-full fa-3x" style="color: #7b68ee;"></i>
-                <h3>长效续航</h3>
-                <p>世界领先的持久性烟弹系统解决方案，提供超长使用时间，让您无需频繁充电或更换烟弹</p>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-eye fa-3x" style="color: #7b68ee;"></i>
-                <h3>全透明设计</h3>
-                <p>革命性的全透明洞穴视窗解决方案，让您清晰看到烟油余量，享受前所未有的视觉体验</p>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-flask fa-3x" style="color: #7b68ee;"></i>
-                <h3>超大容量</h3>
-                <p>最大烟油容量与透明储油舱设计，结合先进烟弹解决方案，提供更持久的满足感</p>
-            </div>
-        </section>
-        
-        <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px; color: #7b68ee;">创新产品系列</h2>
-        
-        <section class="product-showcase">
+        <section class="products">
             <div class="product">
-               <img 
-  src="feelm_global_509283842_18305408809244404_2758410246091260231_n.jpg" 
-  alt="长效烟弹系统图片"  <!-- 图片加载失败时的提示文字，必须填 -->
-  style="max-width: 100%; height: auto;" 
+                <div class="product-img">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </div>
+                <h3>世界最小的透明储油舱</h3>
+                <p>创新的单烟弹可调口味解决方案，小巧便携，满足您的日常需求</p>
+                <div class="product-feature">BLASTY FROSTY</div>
+            </div>
+            
+            <div class="product">
+                <div class="product-img">
                     <i class="fas fa-infinity"></i>
                 </div>
-                <h3>长效烟弹系统</h3>
-                <p>世界领先的持久性烟弹系统解决方案，提供超长使用时间</p>
-                <div style="margin-top: 15px; color: #a78bfa; font-weight: bold;">OFF-ADJUS</div>
+                <h3>世界最长效的烟弹系统</h3>
+                <p>革命性的长效烟弹设计，提供持久稳定的使用体验</p>
+                <div class="product-feature">OFF-ADJUS</div>
             </div>
             
             <div class="product">
-                <div class="feelm_global_509330640_18305408896244404_9188317677388223389_n.jpg">
-                    <i class="fas fa-glasses"></i>
-                </div>
-                <h3>全透明视窗</h3>
-                <p>世界首创强力全透明洞穴视窗解决方案，革新您的使用体验</p>
-                <div style="margin-top: 15px; color: #a78bfa; font-weight: bold;">CLEAR CAVE</div>
-            </div>
-            
-            <div class="product">
-                <div class="feelm_global_509655300_18305408743244404_8017334577632906719_n.jpg">
+                <div class="product-img">
                     <i class="fas fa-vial"></i>
                 </div>
                 <h3>超大容量烟弹</h3>
-                <p>最大烟油容量与透明储油舱的完美结合，先进烟弹解决方案</p>
-                <div style="margin-top: 15px; color: #a78bfa; font-weight: bold;">SPACE S</div>
+                <p>最大烟油容量与透明储油舱设计，结合先进烟弹解决方案</p>
+                <div class="product-feature">SPACE S</div>
             </div>
             
             <div class="product">
-                <div class="feelm_global_521499038_18309251365244404_1328935687091845369_n.jpg">
+                <div class="product-img">
                     <i class="fas fa-sliders-h"></i>
                 </div>
-                <h3>可调口味方案</h3>
-                <p>世界首创"SEESAW"可调口味解决方案，让您自由定制口感</p>
-                <div style="margin-top: 15px; color: #a78bfa; font-weight: bold;">SEESAW TURBO</div>
+                <h3>世界首创"SEESAW"</h3>
+                <p>创新的可调口味解决方案，让您自由定制个人偏好的口感</p>
+                <div class="product-feature">SEESAW TURBO</div>
             </div>
             
             <div class="product">
-                <div class="feelm_global_523943968_18309251431244404_7945629279370533119_n.jpg">
-                    <i class="fas fa-compress-arrows-alt"></i>
+                <div class="product-img">
+                    <i class="fas fa-glasses"></i>
                 </div>
-                <h3>迷你透明储油舱</h3>
-                <p>世界上最小的透明储油舱搭配单烟弹可调口味解决方案</p>
-                <div style="margin-top: 15px; color: #a78bfa; font-weight: bold;">BLASTY FROSTY</div>
+                <h3>世界首创全透明视窗</h3>
+                <p>革命性的强力全透明洞穴视窗解决方案，让您清晰看到烟油余量</p>
+                <div class="product-feature">CLEAR CAVE</div>
             </div>
         </section>
         
-        <section class="tech-specs">
-            <h2>技术优势</h2>
-            <div class="spec-grid">
-                <div class="spec-item">
+        <section class="tech">
+            <h2>核心技术优势</h2>
+            <div class="tech-items">
+                <div class="tech-item">
                     <i class="fas fa-microchip"></i>
-                    <h3>创新陶瓷芯</h3>
-                    <p>采用纳米级陶瓷雾化技术，提供更纯净的口感和更高效的雾化效果</p>
+                    <h3>陶瓷雾化芯</h3>
+                    <p>纳米级陶瓷技术，提供纯净口感</p>
                 </div>
                 
-                <div class="spec-item">
+                <div class="tech-item">
                     <i class="fas fa-tint"></i>
                     <h3>智能烟油管理</h3>
-                    <p>先进的烟油输送系统，确保每一口都保持最佳口感和一致性</p>
+                    <p>确保每一口都保持最佳口感</p>
                 </div>
                 
-                <div class="spec-item">
-                    <i class="fas fa-bolt"></i>
-                    <h3>快速充电技术</h3>
-                    <p>支持快速充电，15分钟充电可使用一整天</p>
+                <div class="tech-item">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>长效电池</h3>
+                    <p>持久续航，减少充电次数</p>
                 </div>
                 
-                <div class="spec-item">
+                <div class="tech-item">
                     <i class="fas fa-wind"></i>
-                    <h3>智能气流控制</h3>
-                    <p>精确控制气流，提供更顺滑的口感和更丰富的烟雾量</p>
+                    <h3>气流控制</h3>
+                    <p>精确控制气流，顺滑口感</p>
                 </div>
             </div>
         </section>
         
         <section class="cta">
             <h2>体验创新科技</h2>
-            <p>立即加入数百万满意用户的行列，体验FEELM带来的非凡电子烟体验</p>
-            <a href="#" class="btn">获取产品目录</a>
+            <p>加入FEELM用户行列，体验非凡的电子烟解决方案</p>
+            <a href="#" class="btn">获取产品详情</a>
         </section>
         
         <footer>
@@ -420,41 +353,25 @@
     </div>
 
     <script>
-        // 简单的滚动动画效果
         document.addEventListener('DOMContentLoaded', function() {
-            const featureCards = document.querySelectorAll('.feature-card');
             const products = document.querySelectorAll('.product');
             
-            // 初始隐藏元素
-            featureCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-            });
-            
+            // 初始状态
             products.forEach(product => {
                 product.style.opacity = '0';
-                product.style.transform = 'scale(0.9)';
+                product.style.transform = 'translateY(20px)';
             });
             
             // 滚动时显示元素
             window.addEventListener('scroll', () => {
                 const triggerBottom = window.innerHeight * 0.8;
                 
-                featureCards.forEach(card => {
-                    const cardTop = card.getBoundingClientRect().top;
-                    if (cardTop < triggerBottom) {
-                        card.style.transition = 'opacity 0.5s, transform 0.5s';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }
-                });
-                
                 products.forEach(product => {
                     const productTop = product.getBoundingClientRect().top;
                     if (productTop < triggerBottom) {
-                        product.style.transition = 'opacity 0.6s, transform 0.6s';
+                        product.style.transition = 'opacity 0.5s, transform 0.5s';
                         product.style.opacity = '1';
-                        product.style.transform = 'scale(1)';
+                        product.style.transform = 'translateY(0)';
                     }
                 });
             });
